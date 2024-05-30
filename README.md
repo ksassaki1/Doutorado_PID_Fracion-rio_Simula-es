@@ -1,6 +1,6 @@
 Matlab Control Scripts
 
-This repository contains MATLAB scripts for designing and optimizing fractional PID controllers, specifically for systems with significant delays. The scripts include functionalities for calculating performance indices like IAE (Integral of Absolute Error), ISE (Integral of Squared Error), and ITAE (Integral of Time-weighted Absolute Error), and use Differential Evolution algorithms for optimization.
+This repository contains MATLAB scripts for designing and optimizing fractional PID controllers, specifically for systems with significant delays. The scripts include functionalities for calculating performance indices like IAE (Integral of Absolute Error), ISE (Integral of Squared Error), and ITAE (Integral of Time-weighted Absolute Error), and use Particle Swarm Optimization (PSO) and Differential Evolution algorithms for optimization.
 
 Contents
 
