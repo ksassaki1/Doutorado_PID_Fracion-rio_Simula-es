@@ -10,8 +10,11 @@ Purpose: Provides functions to calculate IAE and ISE for fractional order PID co
 Key Functions:
 
 calcularIAE(param, Ga_completa): Computes the Integral of Absolute Error.
+
 calcularISE(param, Ga_completa): Computes the Integral of Squared Error.
+
 calcularITAE(param, Ga_completa): Computes the Integral of Time-weighted Absolute Error.
+
 iae_ise_atraso.m
 
 Purpose: Extends the basic IAE and ISE calculations to systems with delays.
@@ -25,7 +28,9 @@ Purpose: Implements Differential Evolution (DE) optimization to tune fractional 
 Key Functions:
 
 diferentialEvolution(fitnessFunc, numGenerations, populationSize, CR, F): Performs the optimization using DE.
+
 fitnessFunc(param, Ga_completa): Defines the cost function for optimization.
+
 iae_ise_deatraso.m
 
 Purpose: Combines DE optimization with delay compensation for tuning fractional PID controllers in systems with delays.
