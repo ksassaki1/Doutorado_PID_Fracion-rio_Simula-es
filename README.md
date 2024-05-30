@@ -5,7 +5,7 @@ This repository contains MATLAB scripts for designing and optimizing fractional 
 Contents
 
 iae_ise.m
-Purpose: Provides functions to calculate IAE and ISE for fractional order PID controllers.
+Purpose: Provides functions to calculate IAE and ISE for fractional order PID controllers using Particle Swarm Optimization (PSO)
 
 Key Functions:
 
