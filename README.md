@@ -1,38 +1,79 @@
-Matlab Control Scripts
+# Matlab Control Scripts
 
-This repository contains MATLAB scripts for designing and optimizing fractional PID controllers, specifically for systems with significant delays. The scripts include functionalities for calculating performance indices like IAE (Integral of Absolute Error), ISE (Integral of Squared Error), and ITAE (Integral of Time-weighted Absolute Error), and use Particle Swarm Optimization (PSO) and Differential Evolution algorithms for optimization.
+Este repositório contém scripts em MATLAB para o projeto e otimização de controladores PID fracionários, especificamente para sistemas com atrasos significativos. Os scripts incluem funcionalidades para calcular índices de desempenho como **IAE** (Integral of Absolute Error), **ISE** (Integral of Squared Error) e **ITAE** (Integral of Time-weighted Absolute Error), utilizando os algoritmos de **Particle Swarm Optimization (PSO)** e **Differential Evolution (DE)** para otimização.
 
-Contents
+---
 
-iae_ise.m
-Purpose: Provides functions to calculate IAE and ISE for fractional order PID controllers using Particle Swarm Optimization (PSO)
+## 📂 **Conteúdos**
 
-Key Functions:
+### `iae_ise.m`
+**Propósito:**  
+Fornece funções para calcular **IAE** e **ISE** para controladores PID fracionários usando **PSO**.
 
-calcularIAE(param, Ga_completa): Computes the Integral of Absolute Error.
+#### **Funções Principais:**
+```matlab
+calcularIAE(param, Ga_completa) 
+% Calcula o Integral of Absolute Error (IAE).
 
-calcularISE(param, Ga_completa): Computes the Integral of Squared Error.
+calcularISE(param, Ga_completa) 
+% Calcula o Integral of Squared Error (ISE).
 
-calcularITAE(param, Ga_completa): Computes the Integral of Time-weighted Absolute Error.
+calcularITAE(param, Ga_completa) 
+% Calcula o Integral of Time-weighted Absolute Error (ITAE).
+```
 
-iae_ise_atraso.m
+---
 
-Purpose: Extends the basic IAE and ISE calculations to systems with delays.
+### `iae_ise_atraso.m`
+**Propósito:**  
+Estende os cálculos básicos de **IAE** e **ISE** para sistemas com atrasos.
 
-Key Functions: Similar to iae_ise.m but adapted for delayed systems.
+#### **Funções:**  
+Similar às do script `iae_ise.m`, mas adaptadas para sistemas com atrasos.
 
-iae_ise_de.m
+---
 
-Purpose: Implements Differential Evolution (DE) optimization to tune fractional PID controller parameters.
+### `iae_ise_de.m`
+**Propósito:**  
+Implementa a otimização por **Differential Evolution (DE)** para sintonizar parâmetros de controladores PID fracionários.
 
-Key Functions:
+#### **Funções Principais:**
+```matlab
+differentialEvolution(fitnessFunc, numGenerations, populationSize, CR, F) 
+% Realiza a otimização utilizando DE.
 
-diferentialEvolution(fitnessFunc, numGenerations, populationSize, CR, F): Performs the optimization using DE.
+fitnessFunc(param, Ga_completa) 
+% Define a função de custo para a otimização.
+```
 
-fitnessFunc(param, Ga_completa): Defines the cost function for optimization.
+---
 
-iae_ise_deatraso.m
+### `iae_ise_deatraso.m`
+**Propósito:**  
+Combina a otimização por **DE** com a compensação de atraso para a sintonia de controladores PID fracionários em sistemas com atrasos.
 
-Purpose: Combines DE optimization with delay compensation for tuning fractional PID controllers in systems with delays.
+#### **Funções:**  
+Integra as funcionalidades dos scripts `iae_ise_atraso.m` e `iae_ise_de.m`.
 
-Key Functions: Combines the functionalities from iae_ise_atraso.m and iae_ise_de.m.
+---
+
+## 📖 **Instruções de Uso**
+1. Certifique-se de ter o **MATLAB** instalado e configurado corretamente.
+2. Clone este repositório para sua máquina local:
+   ```bash
+   git clone https://github.com/seu_usuario/matlab-control-scripts.git
+   cd matlab-control-scripts
+   ```
+3. Execute os scripts no MATLAB para calcular os índices de desempenho ou otimizar os parâmetros do controlador.
+
+---
+
+## 🔧 **Dependências**
+- **MATLAB** R2021a ou superior
+- FOTF toolbox
+
+---
+
+## 👤 **Autor**
+Guilherme Koiti Tanaka Sassaki  
+[LinkedIn](https://www.linkedin.com/in/guilherme-sassaki-10b81ba7/)  
